@@ -10,6 +10,13 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
+    @event.save
+    redirect_to event_path, notice: "Invitation sent!"
+
+  end
+
+  def show
+    @event = Event.find(params[:id])
   end
 
   private 
