@@ -1,0 +1,42 @@
+%h2 Add an Event:
+#new_event
+  .row
+    .col-md-12
+      = form_for @event, {class: 'form-horizontal'} do |f|
+        .form-group
+          %label.control-label.col-md-2{for:'event_description'} Place:
+          .col-md-10
+            = f.text_field :address, class: "form-control"
+        %br
+        .form-group
+          %label.control-label.col-md-2{for:'event_description'} Description:
+          .col-md-10
+            = f.text_field :description, class: "form-control"
+        %br
+        .form-group
+          %label.control-label.col-md-2{for: 'event_start_time'} Start:
+          .col-md-10
+            = f.text_field :start_time, class: "form-control", id: "datetimepicker"
+        %br
+        .form-group
+          %label.control-label.col-md-2{for: 'event_end_time'} End:
+          .col-md-10
+            = f.text_field :end_time, class: "form-control", id: "datetimepicker2"
+        %br
+        .form-group
+          %label.control-label.col-md-2{for: 'event_invitee_email'} Invitee Email:
+          .col-md-10
+            = f.email_field :invitee_email, class: "form-control"
+        %br
+            
+
+        .form-group
+          .col-md-11
+            = f.submit value: 'Send Email', class: 'btn btn-default'
+        %br
+
+
+:javascript
+  $('#datetimepicker').datetimepicker()
+
+  $('#datetimepicker2').datetimepicker()

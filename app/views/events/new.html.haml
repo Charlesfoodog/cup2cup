@@ -1,0 +1,6 @@
+%h1 Cup2Cup
+- if @events
+  - @events.each do |event|
+    = event.description
+
+= render 'form'
