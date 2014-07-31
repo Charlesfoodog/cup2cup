@@ -15,14 +15,16 @@
         %br
         .form-group
           %label.control-label.col-md-2{for: 'event_start_time'} Start:
-          .col-md-10
-            = f.text_field :start_time, class: "form-control", id: "datetimepicker"
+          .col-md-5
+            = f.text_field :start_time_date, as: :string, class: "form-control datepicker"
+          .col-md-5
+            = f.text_field :start_time_time, as: :time, class: "form-control timepicker"
         %br
-        .form-group
-          %label.control-label.col-md-2{for: 'event_end_time'} End:
-          .col-md-10
-            = f.text_field :end_time, class: "form-control", id: "datetimepicker2"
-        %br
+        / .form-group
+        /   %label.control-label.col-md-2{for: 'event_end_time'} End:
+        /   .col-md-10
+        /     = f.text_field :end_time, class: "form-control", id: "datetimepicker2"
+        / %br
         .form-group
           %label.control-label.col-md-2{for: 'event_invitee_email'} Invitee Email:
           .col-md-10
@@ -40,3 +42,5 @@
   $('#datetimepicker').datetimepicker()
 
   $('#datetimepicker2').datetimepicker()
+  $(".datepicker").pickadate()
+  $(".timepicker").pickatime()

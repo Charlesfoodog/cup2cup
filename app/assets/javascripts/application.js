@@ -13,7 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require jquery.ui.all
 //= require underscore
 //= require gmaps/google
+//= require moment
+//= require bootstrap-datetimepicker
+//= require pickadate/picker 
+//= require pickadate/picker.date 
+//= require pickadate/picker.time 
 //= require_tree .

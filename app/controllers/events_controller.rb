@@ -11,7 +11,7 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     @event.save
-    redirect_to event_path, notice: "Invitation sent!"
+    redirect_to @event, notice: "Invitation sent!"
 
   end
 
@@ -22,6 +22,6 @@ class EventsController < ApplicationController
   private 
 
   def event_params
-    params.require(:event).permit([:start_time, :end_time, :description, :invitee_email, :address])
+    params.require(:event).permit([:start_time, :start_time_date, :start_time_time, :end_time, :description, :invitee_email, :address])
   end
 end
