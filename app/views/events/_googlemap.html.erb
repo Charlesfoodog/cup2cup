@@ -1,12 +1,29 @@
 <div id="googlemap">dsafdsfasd</div>
 
 <script type="text/javascript"> 
-<!--
+  getLocation();
+  function getLocation() {
+    if(navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
+      } else {
+        alert("Geolocation is not supported by this browser.");
+    }
+  }
+
+  function geoSuccess(position) {
+    var lat = position.coords.latitude;
+    var lng = position.coords.longitude;
+    // alert("lat:" + lat + " lng:" + lng);
+  }
+
+  function geoError() {
+    alert("Sorry, we were not able to find your current location.");
+  }
   var defaultZoom = 16; // Why zoomed in? Because it looks good.
   
   // create map and add controls
   var mapOptions = {
-    center: new google.maps.LatLng(13.731547730050778, 100.56798934936523),
+    center: new google.maps.LatLng(lat, lng),
     zoom: defaultZoom,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     scrollwheel: false,
@@ -19,14 +36,14 @@
   // // '100.56798934936523'
   // var mylat = document.getElementById("location_lat").value;
   // var mylng = document.getElementById("location_lng").value;
-  if (jQuery.isEmptyObject(mylat)) {
-    var mylat = '13.731548';
-    var mylng = '100.56799';
+  if (jQuery.isEmptyObject(lat)) {
+    var lat = '49.2839499';
+    var lng = '-123.1200867';
     var defaultZoom = 14;
   };
 
   // set center point of map to be of the Marker or the Default City
-  var centrePoint = new google.maps.LatLng(mylat, mylng);
+  var centrePoint = new google.maps.LatLng(lat, lng);
   map.setCenter(centrePoint);
   map.setZoom(defaultZoom); 
   
@@ -167,7 +184,7 @@
     }
   };
 
-//-->
+
 </script>
 
 <br />

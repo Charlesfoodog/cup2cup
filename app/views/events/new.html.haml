@@ -1,4 +1,8 @@
-%h1 Cup2Cup
+#header
+  %span
+    %a{:href => "#"}
+      %img{:src => "https://s3-us-west-2.amazonaws.com/cup2cup/logo_try1.png"}
+    %h1 Cup 2 Cup
 - if @events
   - @events.each do |event|
     = event.description

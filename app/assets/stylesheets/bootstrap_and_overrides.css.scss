@@ -1,6 +1,13 @@
 @import 'bootstrap';
 @import 'bootstrap-datetimepicker';
 
+body {font-family: 'Roboto', sans-serif;}
+#header h1{ display: inline-block; font-size: 3em; font-weight: bold;}
+#header img {
+  width: 100px;
+  height: 100px;
+}
+
 html, body, #map-canvas {
         height: 100%;
         margin: 0px;
