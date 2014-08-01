@@ -6,7 +6,7 @@
         .form-group
           %label.control-label.col-md-2{for:'event_description'} Place:
           .col-md-10
-            = f.text_field :address, class: "form-control"
+            = f.text_field :address, class: "form-control search-query", id: 'location_search'
         %br
         .form-group
           %label.control-label.col-md-2{for:'event_description'} Description:
@@ -36,6 +36,17 @@
           .col-md-11
             = f.submit value: 'Send Email', class: 'btn btn-default'
         %br
+
+= render 'googlemap'
+/ %input#pac-input.controls{:placeholder => "Enter a location", :type => "text"}
+/   #type-selector.controls
+/     %input#changetype-all{:checked => "checked", :name => "type", :type => "radio"}
+/       %label{:for => "changetype-all"} All
+/       %input#changetype-establishment{:name => "type", :type => "radio"}
+/         %label{:for => "changetype-establishment"} Establishments
+/         %input#changetype-geocode{:name => "type", :type => "radio"}
+/           %label{:for => "changetype-geocode"} Geocodes
+/   #map-canvas
 
 
 :javascript

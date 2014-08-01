@@ -1,0 +1,5 @@
+client = GooglePlacesAutocomplete::Client.new(:api_key => 'AIzaSyBE-5TzcGkPVkNGRw1z0C6FVddDbl82FyA')
+autocomplete = client.autocomplete(:input => "Paris", :types => "geocode")
+Rails.logger.info("$$$$$$$$$$$$$$$$$$$")
+Rails.logger.info(autocomplete.predictions.first.description)
+Rails.logger.info("$$$$$$$$$$$$$$$$$$$")
