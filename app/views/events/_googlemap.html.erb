@@ -34,8 +34,8 @@
   // // I'm Centering the map in Bangkok
   // // '13.731547730050778'
   // // '100.56798934936523'
-  // var mylat = document.getElementById("location_lat").value;
-  // var mylng = document.getElementById("location_lng").value;
+  // var lat = document.getElementById("location_lat").value;
+  // var lng = document.getElementById("location_lng").value;
   if (jQuery.isEmptyObject(lat)) {
     var lat = '49.2839499';
     var lng = '-123.1200867';
@@ -91,8 +91,8 @@
     marker.setPosition(place.geometry.location);
     map.panTo(place.geometry.location);
     map.setZoom(16);
-    document.getElementById("location_lat").value = place.geometry.location.lat();
-    document.getElementById("location_lng").value = place.geometry.location.lng();
+    lat = place.geometry.location.lat();
+    lng = place.geometry.location.lng();
     
     // Sets the proper image on the marker. ie. school/hospital marker
     var image = new google.maps.MarkerImage(
@@ -146,27 +146,7 @@
     var formatted_address = place.formatted_address;
     var formatted_phone_number = place.formatted_phone_number;
     
-    if (zipcode){
-      document.getElementById("location_postcode").value = zipcode;
-    }
-    if (city) {
-      document.getElementById("location_city").value = city;
-    }
-    if (country) {
-      document.getElementById("location_country").value = country;
-    }
-    if (sublocality) {
-      document.getElementById("location_district").value = sublocality;
-    }
-    if (streetname) {
-      document.getElementById("location_address").value = streetname;
-    }
-    if (location_name) {
-      document.getElementById("location_location_name").value = location_name;
-    }
-    if (formatted_phone_number) {
-      document.getElementById("location_phone_number").value = formatted_phone_number;
-    }
+    
     photos = place.photos;
     $('#place_images').empty();
     for (var i = 0; i < photos.length; i++) {
