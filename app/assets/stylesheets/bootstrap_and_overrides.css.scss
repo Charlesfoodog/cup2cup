@@ -1,12 +1,28 @@
 @import 'bootstrap';
 @import 'bootstrap-datetimepicker';
 
-body {font-family: 'Roboto', sans-serif;}
-#header h1{ display: inline-block; font-size: 3em; font-weight: bold;}
-#header img {
-  width: 100px;
-  height: 100px;
+.container {height: 100%;}
+
+body {font-family: 'Roboto', sans-serif; height: 100%; }
+
+.topNav {width: 50%; height: 100px;  position: fixed; background: rgba(255,255,255,0.5);}
+.logo img { height: 70px; margin: 10px 0 0 30px;  }
+.homepage {
+  background-image: url("https://s3-us-west-2.amazonaws.com/cup2cup/Stock+Photos/abusinessmandrinkingcoffeeinthecanteen.jpg");
+  background-size: 100% auto;
+  height: 100%;
 }
+
+.signup { 
+  color: white;
+  background: rgba(0,0,0,0.5);
+  height: 100%;
+}
+.form {
+  background: #f4efec;
+  padding: 100px 40px 40px 40px;
+}
+
 
 #googlemap {
   border: 1px dashed #999;
@@ -27,6 +43,8 @@ body {font-family: 'Roboto', sans-serif;}
   border: 1px solid #ccc;
   box-shadow: 0px 0px 3px #ccc;
 }
+
+
 
 html, body, #map-canvas {
         height: 100%;
