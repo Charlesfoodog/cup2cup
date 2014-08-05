@@ -56,3 +56,5 @@ gem 'bootstrap3-datetimepicker-rails', '~> 3.0.0.2'
 gem 'time_splitter'
 gem 'pickadate-rails'
 gem 'google_places_autocomplete'
+gem 'wicked'
+gem 'quiet_assets', group: :development

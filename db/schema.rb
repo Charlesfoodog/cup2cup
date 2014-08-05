@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20140730195841) do
     t.string   "last_sign_in_ip"
     t.string   "first_name"
     t.string   "last_name"
+    t.string   "image_url"
     t.text     "bio"
     t.string   "provider"
     t.string   "uid"

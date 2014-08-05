@@ -32,6 +32,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
 
       t.string :first_name
       t.string :last_name
+      t.string :image_url
       t.text :bio
       t.string :provider
       t.string :uid

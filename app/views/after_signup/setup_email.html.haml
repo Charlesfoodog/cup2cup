@@ -1,0 +1,6 @@
+.setupEmail
+  = form_for @user, url: wizard_path, method: :put do |f|
+    %p
+      Biography: 
+      = f.text_field :bio
+    = f.submit "Continue"

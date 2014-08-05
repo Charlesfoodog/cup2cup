@@ -10,7 +10,19 @@
       %li 2) Choose a place 
       %li 3) Choose a time 
       %li 4) Provide a short description for why you want to meet
-    %p Sign in with 
     %btn.btn-default
       = link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2)
+    %br
+    / Or
+    / = form_tag registration_path(:user) do
+    /   %p
+    /     email: 
+    /     = text_field_tag 'user[email]'
+    /   %p
+    /     password:
+    /     = password_field_tag 'user[password]' 
+    /   %button Sign Up
+    /   = check_box_tag 'user[remember_me]'
+    /   remember me
+    / %br
     now to get started!

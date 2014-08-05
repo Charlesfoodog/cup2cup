@@ -1,4 +1,10 @@
 .topNav 
   .logo
-    %a{:href => "#"}
-      %img{:src => "https://s3-us-west-2.amazonaws.com/cup2cup/Cup2CupLogoTry2.png"}
+    .col-md-6
+      %a{:href => "#"}
+        %img{:src => "https://s3-us-west-2.amazonaws.com/cup2cup/Cup2CupLogoTry2.png"}
+    .col-md-6
+      - if user_signed_in?
+        %a{:href => "#"}
+        %img{:src => "#{current_user.image_url}" }
+        = link_to "Sign Out", destroy_user_session_path, method: :delete
