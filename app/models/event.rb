@@ -1,9 +1,9 @@
 class Event < ActiveRecord::Base
   extend TimeSplitter::Accessors
   split_accessor :start_time
+
+  belongs_to :user
   
-  has_many :users, through: :meetings
-  has_many :meetings
 
   geocoded_by :full_street_address
 

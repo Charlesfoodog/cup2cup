@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20140730195841) do
     t.string   "address"
     t.boolean  "is_confirmed"
     t.string   "invitee_email"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

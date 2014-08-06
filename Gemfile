@@ -58,3 +58,5 @@ gem 'pickadate-rails'
 gem 'google_places_autocomplete'
 gem 'wicked'
 gem 'quiet_assets', group: :development
+gem 'letter_opener', group: :development
+gem 'googlestaticmap'

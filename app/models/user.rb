@@ -5,8 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauth_providers => [:google_oauth2]
 
-  has_many :events, through: :meetings
-  has_many :meetings
+  has_many :events, dependent: :destroy
+  
 
   def self.find_or_create_from_google(user_info, uid)
     user = User.find_by_email(user_info["email"])
@@ -31,5 +31,13 @@ class User < ActiveRecord::Base
       user.email = auth.info.email
      end
    end
+
+   def name_display
+    if first_name || last_name
+      "#{first_name} #{last_name}".strip
+    else
+      email
+    end
+  end
 end
 

@@ -9,9 +9,11 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.new(event_params)
+    @event = current_user.events.new(event_params)
     @event.save
     redirect_to @event, notice: "Invitation sent!"
+    @user = current_user
+    EventMailer.event_invitation(@event, @user).deliver
 
   end
 

@@ -22,6 +22,6 @@ class AfterSignupController < Wicked::WizardController
   end
 
   def user_params
-    params.require(:user).permit([:first_name, :last_name, :address, :is_musician, :image, :bio])
+    params.require(:user).permit([:first_name, :last_name, :address, :is_musician, :image, :bio, :event_id])
   end
 end

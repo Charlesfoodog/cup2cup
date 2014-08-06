@@ -9,6 +9,7 @@ class CreateEvents < ActiveRecord::Migration
       t.string :address
       t.boolean :is_confirmed
       t.string :invitee_email
+      t.references :user
 
       t.timestamps
     end
