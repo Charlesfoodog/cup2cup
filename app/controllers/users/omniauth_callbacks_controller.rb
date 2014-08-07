@@ -8,11 +8,14 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     Rails.logger.info("&&&&&&&&&&&&&&&&&&&&&&&&&&")
     uid       = request.env["omniauth.auth"].uid
     @token = @auth["credentials"]["token"]
+
     
     @user     = User.find_or_create_from_google(user_info, uid)
+    @user.image_url = @auth["image"]
     @user.token = @token
     @user.provider = "google"
     @user.uid = uid
+
 
     if @user.persisted?
       if @user.bio != nil
