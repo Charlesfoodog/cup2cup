@@ -235,7 +235,7 @@ Devise.setup do |config|
                   ENV["GOOGLE_CLIENT_SECRET"], 
                   { 
                     access_type: "offline", 
-                    # scope: 'https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/calendar' 
+                    scope: 'https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/calendar https://www.googleapis.com/auth/plus.me https://www.googleapis.com/auth/userinfo.profile' 
                   }
 
   # ==> Warden configuration
