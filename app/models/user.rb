@@ -14,11 +14,13 @@ class User < ActiveRecord::Base
     unless user
     user = User.create( first_name:   user_info["first_name"],
                           last_name:  user_info["last_name"],
+                          image_url:  user_info["image"],
                           email:      user_info["email"],
                           uid:        user_info["uid"],
                           provider:   user_info["google_oauth2"],
                           password:   Devise.friendly_token)
     end
+    user.image_url.sub! 'sz=50', 'sz=100'
     user
   end
 
