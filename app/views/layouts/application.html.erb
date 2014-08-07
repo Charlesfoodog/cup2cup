@@ -14,10 +14,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  <%= render '/homepage/top_nav'%>
+  <%= render 'layouts/flash' %>
   <%= yield %>
 </body>
 </html>

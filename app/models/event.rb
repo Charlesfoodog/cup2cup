@@ -1,5 +1,6 @@
 class Event < ActiveRecord::Base
   extend TimeSplitter::Accessors
+  validates :description, length: { maximum: 250 }
   split_accessor :start_time
 
   belongs_to :user

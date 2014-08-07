@@ -12,9 +12,9 @@ class User < ActiveRecord::Base
     user = User.find_by_email(user_info["email"])
 
     unless user
-    user = User.create( first_name: user_info["first_name"],
+    user = User.create( first_name:   user_info["first_name"],
                           last_name:  user_info["last_name"],
-                          image_url: user_info["image"],
+                          image_url:  user_info["image"],
                           email:      user_info["email"],
                           uid:        user_info["uid"],
                           provider:   user_info["google_oauth2"],

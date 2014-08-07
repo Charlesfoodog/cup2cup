@@ -1,54 +1,62 @@
-%h2 Add an Event:
-#new_event
-  .row
-    .col-md-12
-      = form_for @event, {class: 'form-horizontal'} do |f|
-        .form-group
-          %label.control-label.col-md-2{for:'event_description'} Place:
-          .col-md-10
-            = f.text_field :address, class: "form-control search-query", id: 'location_search'
-        %br
-        .form-group
-          %label.control-label.col-md-2{for:'event_description'} Description:
-          .col-md-10
-            = f.text_field :description, class: "form-control"
-        %br
-        .form-group
-          %label.control-label.col-md-2{for: 'event_start_time'} Start:
+.form
+  .userInfo   
+    - if user_signed_in?
+      %a{:href => "#"}
+      %img{:src => "#{current_user.image_url}" }
+      = link_to "Sign Out", destroy_user_session_path, method: :delete
+  = form_for @event, {class: 'form-horizontal'} do |f|
+    .emailForm
+      
+      .row
+        %a{:href => "#"}
+          %img{:src => "https://s3-us-west-2.amazonaws.com/cup2cup/Cup2CupLogoTry2_Text.png"}
+      .intro
+        = current_user.first_name
+        wants to buy you a coffee!
+      .formTextArea
+        .whyText
+          Why?
+        .whyForm
+          = f.text_area :description, class: "form-control", placeholder: "Give them a compelling reason to meet you. (< 250 Chars)", wrap: "hard"
+      .formTextArea
+        .whenText
+          When?
+        .whenForm
           .col-md-5
-            = f.text_field :start_time_date, as: :string, class: "form-control datepicker"
-          .col-md-5
-            = f.text_field :start_time_time, as: :time, class: "form-control timepicker"
-        %br
-        / .form-group
-        /   %label.control-label.col-md-2{for: 'event_end_time'} End:
-        /   .col-md-10
-        /     = f.text_field :end_time, class: "form-control", id: "datetimepicker2"
-        / %br
-        .form-group
-          %label.control-label.col-md-2{for: 'event_invitee_email'} Invitee Email:
-          .col-md-10
-            = f.email_field :invitee_email, class: "form-control"
-        %br
-            
+            = f.text_field :start_time_date, as: :string, class: "form-control datepicker", placeholder: "#{Time.now.strftime("%e %B")}"
+          .col-md-7.hour
+            = f.text_field :start_time_time, as: :time, class: "form-control timepicker", placeholder: "#{Time.now.strftime("%l:%M %p")}"
+      .formTextArea.where
+        .whereText
+          Where?
+        .whereMap
+          = f.text_field :address, class: "form-control search-query", id: 'location_search'
+          = render 'googlemap'
+      .formTextArea.who
+        .whoTitle
+          Who's #{current_user.first_name}?
+        .col-md-3.whoImage
+          = image_tag(current_user.image_url)
+        .col-md-9.whoText
+          <strong>Name: </strong> #{current_user.name_display}
+          %br
+          %br
+          <strong>Bio: </strong> #{current_user.bio}
+          = link_to "Edit", edit_user_registration_path
+          
 
-        .form-group
-          .col-md-11
-            = f.submit value: 'Send Email', class: 'btn btn-default'
-        %br
+    .inviteeEmailText
+      %p 
+        Invitee Email:
+        = f.email_field :invitee_email
+      Now simply, press 
+      = f.submit value: 'Send Email', class: 'btn btn-default'
+      %br
+      and wait for your response
 
-= render 'googlemap'
-%h4 Images
-#place_images
-/ %input#pac-input.controls{:placeholder => "Enter a location", :type => "text"}
-/   #type-selector.controls
-/     %input#changetype-all{:checked => "checked", :name => "type", :type => "radio"}
-/       %label{:for => "changetype-all"} All
-/       %input#changetype-establishment{:name => "type", :type => "radio"}
-/         %label{:for => "changetype-establishment"} Establishments
-/         %input#changetype-geocode{:name => "type", :type => "radio"}
-/           %label{:for => "changetype-geocode"} Geocodes
-/   #map-canvas
+
+  / %h4 Images
+  / #place_images
 
 
 :javascript
