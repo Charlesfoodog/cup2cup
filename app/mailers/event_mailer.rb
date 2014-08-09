@@ -6,7 +6,8 @@ class EventMailer < ActionMailer::Base
     @event = event
     @time = @event.start_time.strftime("%B %e at %l:%M %p")
     @user = user
-    @url = 'http://www.tsn.ca'
+    # @url = 'http://www.cup2cup.herokuapp.com/events/#{@event.id}'
+    @url = event_url(@event)
     map = GoogleStaticMap.new(:zoom => 15, :center => MapLocation.new(:address => @event.address))
     map.markers << MapMarker.new(:color => "blue", :location => MapLocation.new(:address => @event.address))
     @image_url = map.url('http')
