@@ -13,11 +13,42 @@ body {font-family: 'Roboto', sans-serif; height: 100%; }
   background-size: 100% auto;
   height: 100%;
 }
-
+.homepageLeft {height: 100%; width: 50%; float: left; position: relative;}
+.homepageRight {height: 100%; width: 50%; float: right; }
 .signup { 
   color: white;
   background: rgba(0,0,0,0.5);
   height: 100%;
+  padding-top: 75px;
+  padding-left: 15px;
+}
+.signup h2 { font-size: 2.5em;}
+.signup p {font-weight: lighter; font-size: 1.2em;}
+.signup ul {padding-left: 0; margin-left: -15px; margin-top: 20px;}
+
+.signup li {
+  list-style-type: none;
+  width: 275px;
+  height: 50px;
+  padding: 12px;
+  background: rgba(0,0,0,0.5);
+  border: 1px solid white;
+  border-left: none;
+  margin-top: 5px;
+  font-weight: lighter;
+  cursor: pointer; 
+}
+.signup li:hover { background: rgba(255,255,255,0.8); color: black;}
+.section { 
+  width: 0; 
+  height: 85.8%; 
+  background: rgba(255,255,255,0.8); 
+  display: none; 
+  position: absolute;
+  top: 100px;
+  right: 0;
+  color: black;
+  
 }
 .form {
 

@@ -1,29 +1,39 @@
 = render 'top_nav'
 .homepage
-  .col-md-6
+  .homepageLeft
+    .section.sectionOne
+      Hey Now
+    .section.sectionTwo
+      Whaaaaaaat?
+    .section.sectionThree
+      Yeeeeeeah!!
+    .section.sectionFour
+      Okaaaayyy!
     
-  .col-md-6.signup
-    %h2 Never cold e-mail again
-    %p Cup2Cup makes it easy to send out personalized email invites. 
-    %p We do the work for you. With 4 simple steps:
-    %ul
-      %li 1) Pick your invitee 
-      %li 2) Choose a place 
-      %li 3) Choose a time 
-      %li 4) Provide a short description for why you want to meet
-    %btn.btn-default
-      = link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2)
-    %br
-    / Or
-    / = form_tag registration_path(:user) do
-    /   %p
-    /     email: 
-    /     = text_field_tag 'user[email]'
-    /   %p
-    /     password:
-    /     = password_field_tag 'user[password]' 
-    /   %button Sign Up
-    /   = check_box_tag 'user[remember_me]'
-    /   remember me
-    / %br
-    now to get started!
+  .homepageRight
+    .signup
+      %h2 Never cold e-mail again!
+      %br
+      %p Cup2Cup is here to make it easy to send out personalized email invites. 
+      %p With 4 simple steps:
+      %ul
+        %li.stepOne 1) Fill out an email template (5 W's)
+        %li.stepTwo 2) Send your peronally customized email
+        %li.stepThree 3) Wait for their response 
+        %li.stepFour 4) (Hopefully) go to your coffee meeting
+      %btn.btn-default
+        = link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2)
+      %br
+      / Or
+      / = form_tag registration_path(:user) do
+      /   %p
+      /     email: 
+      /     = text_field_tag 'user[email]'
+      /   %p
+      /     password:
+      /     = password_field_tag 'user[password]' 
+      /   %button Sign Up
+      /   = check_box_tag 'user[remember_me]'
+      /   remember me
+      / %br
+      now to get started!
