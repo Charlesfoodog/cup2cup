@@ -1,14 +1,14 @@
 = render 'top_nav'
-.homepage
+%section.homepage
   .homepageLeft
-    .section.sectionOne
-      Hey Now
-    .section.sectionTwo
-      Whaaaaaaat?
-    .section.sectionThree
-      Yeeeeeeah!!
-    .section.sectionFour
-      Okaaaayyy!
+    / .section.sectionOne
+    /   Hey Now
+    / .section.sectionTwo
+    /   Whaaaaaaat?
+    / .section.sectionThree
+    /   Yeeeeeeah!!
+    / .section.sectionFour
+    /   Okaaaayyy!
     
   .homepageRight
     .signup
@@ -24,16 +24,22 @@
       %btn.btn-default
         = link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2)
       %br
-      / Or
-      / = form_tag registration_path(:user) do
-      /   %p
-      /     email: 
-      /     = text_field_tag 'user[email]'
-      /   %p
-      /     password:
-      /     = password_field_tag 'user[password]' 
-      /   %button Sign Up
-      /   = check_box_tag 'user[remember_me]'
-      /   remember me
-      / %br
+
+      Or
+      = form_tag registration_path(:user) do
+        %p
+          email: 
+          = text_field_tag 'user[email]'
+        %p
+          password:
+          = password_field_tag 'user[password]' 
+        %button Sign Up
+        = check_box_tag 'user[remember_me]'
+        remember me
+      %br
       now to get started!
+
+%section.stepOne.clear 
+  %h2 Personalize your email template (5 W's)
+  = image_tag("https://s3-us-west-2.amazonaws.com/cup2cup/screenshot.jpg")
+      

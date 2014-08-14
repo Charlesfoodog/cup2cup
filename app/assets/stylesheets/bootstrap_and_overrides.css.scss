@@ -5,16 +5,17 @@
 .clear { clear: both; display: inline-block;}
 
 body {font-family: 'Roboto', sans-serif; height: 100%; }
-
-.topNav {width: 50%; height: 100px;  position: fixed; background: rgba(255,255,255,0.5);}
+section {height: 100%; width: 100%; }
+.topNav {width: 50%; height: 100px;  float: left; background: rgba(255,255,255,0.5);}
 .logo img { height: 70px; margin: 10px 0 0 30px;  }
 .homepage {
   background-image: url("https://s3-us-west-2.amazonaws.com/cup2cup/Stock+Photos/abusinessmandrinkingcoffeeinthecanteen.jpg");
   background-size: 100% auto;
   height: 100%;
 }
-.homepageLeft {height: 100%; width: 50%; float: left; position: relative;}
+.homepageLeft {width: 50%; float: left; position: relative;}
 .homepageRight {height: 100%; width: 50%; float: right; }
+
 .signup { 
   color: white;
   background: rgba(0,0,0,0.5);
@@ -65,6 +66,18 @@ body {font-family: 'Roboto', sans-serif; height: 100%; }
 }
 .emailForm img {
   width: 200px;
+}
+.stepOne {
+  background: #1f1b19; 
+  color: white; 
+  padding: 30px;
+}
+.stepOne img {
+  margin: 0 auto;
+  margin-top: 20px;
+  display: block;
+  height: 90%;
+
 }
 .intro {
   width: 600px;
