@@ -60,3 +60,4 @@ gem 'wicked'
 gem 'quiet_assets', group: :development
 gem 'letter_opener', group: :development
 gem 'googlestaticmap'
+gem 'figaro'

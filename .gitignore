@@ -15,3 +15,6 @@
 /log/*.log
 /tmp
 /config/initializers/credentials_for_google_oauth.rb
+
+# Ignore application configuration
+/config/application.yml

@@ -100,7 +100,7 @@ section {height: 100%; width: 100%; }
 
 .masthead{
   position:relative;
-  padding:80px 15px;
+  padding:50px 15px;
   color:#FFF;
   text-align:center;
   text-shadow:0 1px 0 rgba(0,0,0,.1);
@@ -121,7 +121,9 @@ section {height: 100%; width: 100%; }
   -webkit-animation:fadein 2s;
   -o-animation:fadein 2s;
   }
-
+.masthead h1 {margin-left: 15%;color: black; }
+.logo {margin-bottom: 20px;}
+.logo img { height: 200px; margin-left: 15%; }
 .loading *{
   -webkit-animation:none!important;
   -moz-animation:none!important;
@@ -493,56 +495,9 @@ to {
 
 
 
-/*==========9. CUSTOM MEDIA QUERIES==============*/
-
-
-/*MEDIA QUERIES*/
-
-@media (max-width: 991px) {
- h1 {
-font-size: 35px;
-line-height: 50px;
-margin: 15px 0;
-}
- h2 {
-font-size: 35px;
-}
- .testimonials [class*="col-"]:not(:first-child) {
- margin-top: 40px;
-}
- .planpricing [class*="col-"]:not(:first-child) {
- margin-top: 30px;
-}
- .breath {
-margin: 30px auto;
-}
-}
- @media (max-width: 767px) {
- h1 {
-font-size: 30px;
-line-height: 40px;
-}
- h2 {
-font-size: 30px;
-line-height: 40px;
-}
- .subscribe [class*="col-"]:not(:first-child) {
- margin-top: 30px;
-}
- .masthead {
-padding: 40px 15px;
-}
-}
- @media (max-width: 480px) {
-   /*Media Queries for smaller devices*/
-   .masthead {
-  background-attachment: scroll;
-}
-
-}
 
 .topNav {width: 50%; height: 100px;  float: left; background: rgba(255,255,255,0.5);}
-.logo img { height: 200px; margin: 10px 0 0 30px;  }
+
 .homepage {
   background-image: url("https://s3-us-west-2.amazonaws.com/cup2cup/Stock+Photos/abusinessmandrinkingcoffeeinthecanteen.jpg");
   background-size: 100% auto;
@@ -795,3 +750,51 @@ html, body, #map-canvas {
         font-size: 13px;
         font-weight: 300;
       }
+
+/*==========9. CUSTOM MEDIA QUERIES==============*/
+
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 991px) {
+ h1 {
+font-size: 35px;
+line-height: 50px;
+margin: 15px 0;
+}
+ h2 {
+font-size: 35px;
+}
+ .testimonials [class*="col-"]:not(:first-child) {
+ margin-top: 40px;
+}
+ .planpricing [class*="col-"]:not(:first-child) {
+ margin-top: 30px;
+}
+ .breath {
+margin: 30px auto;
+}
+}
+ @media (max-width: 767px) {
+ h1 {
+font-size: 30px;
+line-height: 40px;
+}
+ h2 {
+font-size: 30px;
+line-height: 40px;
+}
+ .subscribe [class*="col-"]:not(:first-child) {
+ margin-top: 30px;
+}
+ .masthead {
+padding: 40px 15px;
+}
+}
+ @media (max-width: 480px) {
+   /*Media Queries for smaller devices*/
+   .masthead {
+  background-attachment: scroll;
+}
+
+}
