@@ -7,10 +7,11 @@
           %br (Hint: make yourself seem interesting) 
         = f.text_area :bio, class: 'form-control', rows: '10'
         %br
-        .profile-pic.clear
-          %h2 Profile Picture
-          = f.file_field :avatar
-          = bootstrap_paperclip_picture f, :avatar
+        - if current_user.image_url != nil
+          .profile-pic.clear
+            %h2 Profile Picture
+            = f.file_field :avatar
+            = bootstrap_paperclip_picture f, :avatar
         %br
         = f.submit "Continue", class: 'btn btn-success btn-lrg'
-        
+          
