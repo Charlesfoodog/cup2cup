@@ -1,6 +1,16 @@
-.setupEmail
-  = form_for @user, url: wizard_path, method: :put do |f|
-    %p
-      Biography: 
-      = f.text_field :bio
-    = f.submit "Continue"
+.addBio
+  .im-centered-2
+    .row.setupEmail
+      = form_for @user, url: wizard_path, method: :put do |f|
+        %h2 
+          Add a quick biography for yourself 
+          %br (Hint: make yourself seem interesting) 
+        = f.text_area :bio, class: 'form-control', rows: '10'
+        %br
+        .profile-pic.clear
+          %h2 Profile Picture
+          = f.file_field :avatar
+          = bootstrap_paperclip_picture f, :avatar
+        %br
+        = f.submit "Continue", class: 'btn btn-success btn-lrg'
+        

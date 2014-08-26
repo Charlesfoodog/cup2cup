@@ -6,7 +6,7 @@
       <div class="logo"> <a href="index.html#"><img src="https://s3-us-west-2.amazonaws.com/cup2cup/Cup2CupLogoTry2_Text.png" alt="logo"></a>
       </div>
  
-      <h1>Never send a <br>cold email again</h1>
+      <h1>Never send<br>a cold email again</h1>
  
       <div class="row">
         <div class="col-md-6 col-sm-12 col-md-offset-3 subscribe">
@@ -39,9 +39,7 @@
       <h2>We make setting up a coffee meeting a more pleasant experience</h2>
       <h4>Simply fill out our form and your invitee will receive an email that looks like this:</h4>
     </div>
-    <div class="btn btn-default">
-        <%= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2) %>
-    </div>
+    
 
     <section class="row heroimg breath">
       <div class="col-md-12 text-center"> 
@@ -57,9 +55,9 @@
     <section class="row features">
       <div class="col-sm-6 col-md-3">
         <div class="thumbnail"> 
-          <img src="service_01.png" alt="analytics-icon">
+          <img src="step1.png" alt="analytics-icon">
           <div class="caption">
-            <h3>Step 1</h3>
+            <h3>1) Engage</h3>
             <p>Tell them why you want to meet!</p>
           </div>
         </div><! --/thumbnail -->
@@ -67,9 +65,9 @@
  
       <div class="col-sm-6 col-md-3">
         <div class="thumbnail"> 
-          <img src="service_02.png" alt="analytics-icon">
+          <img src="step2.png" alt="analytics-icon">
           <div class="caption">
-            <h3>Step 2</h3>
+            <h3>2) Schedule</h3>
             <p>Pick a day and time.</p>
           </div>
         </div><! --/thumbnail -->
@@ -77,9 +75,9 @@
  
       <div class="col-sm-6 col-md-3">
         <div class="thumbnail"> 
-          <img src="service_03.png" alt="analytics-icon">
+          <img src="step3.png" alt="analytics-icon">
           <div class="caption">
-            <h3>Step 3</h3>
+            <h3>3) Select</h3>
             <p>Pick where to go get coffee.</p>
           </div>
         </div><! --/thumbnail -->
@@ -87,14 +85,15 @@
  
       <div class="col-sm-6 col-md-3">
         <div class="thumbnail"> 
-          <img src="service_04.png" alt="analytics-icon">
+          <img src="step4.png" alt="analytics-icon">
           <div class="caption">
-            <h3>Step 4</h3>
+            <h3>4) Impress</h3>
             <p>Tell them who you are! </p>
           </div>
         </div><! --/thumbnail -->
       </div><! --/col-sm-6-->
     </section><! --/section -->
+
  
 
       <!-- ******************** CLIENTS SECTION ******************** -->  
@@ -131,13 +130,36 @@
       <! -- ******************** FOOTER ******************** -->    
     <main class="footercta" role="main">
       <div class="container">
-        <h1>The Most Simple & <strong>Powerful Way</strong> <br>
-          to <strong>launch</strong> your product</h1>
- 
-        <div class="row">
-          <div class="col-md-12 breath text-center"> 
-            <a href="index.html#top" class="btn btn-success btn-lg gototop">GET EARLY ACCESS</a> 
+        <div class="im-centered">
+          <div class="row">
+            <div class="thumbnail"> 
+              <img src="step5.png" alt="analytics-icon">
+              <div class="caption">
+                <h3>5) Get it started</h3>
+                <p>Send them a Cup2Cup email! </p>
+              </div>
+            </div><! --/thumb -->
           </div>
+        </div>
+   
+        </div>
+        <h1>Sign up <strong>Now</strong> <br>
+          and start taking better coffee meetings:</h1>
+  
+        <div class="row login">
+           
+            <div class="col-md-4">
+              <%= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2), class: "btn btn-success btn-lg" %>
+            </div>
+            <div class="col-md-4">
+              <%= link_to "Sign in with Linkedin", user_omniauth_authorize_path(:linkedin), class: "btn btn-primary btn-lg" %>
+            </div>
+            <div class="col-md-4">
+              <%= render "sign_up" %>
+            </div>
+          <!-- <div class="col-md-12 breath text-center"> 
+            <a href="index.html#top" class="btn btn-success btn-lg gototop">GET EARLY ACCESS</a> 
+          </div> -->
         </div>
       </div><! --/container -->
     </main><! --/main -->

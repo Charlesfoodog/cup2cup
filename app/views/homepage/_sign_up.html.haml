@@ -1,0 +1,20 @@
+= form_for(:user, :url => registration_path(:user)) do |f|
+  .col-md-6
+    email: 
+    = f.text_field :email, class: 'form-control'
+    password:
+    = f.password_field :password, class: 'form-control'
+  .col-md-6
+    = f.submit 'Sign In / Up', class: 'btn btn-default btn-lg'
+    %br
+    = f.check_box :remember_me
+    remember me
+    %br
+    = link_to "Forgot your password?", new_password_path(:user)
+/ = form_for(:user, :url => session_path(:user)) do |f|
+/   = f.text_field :email
+/   = f.password_field :password
+/   = f.check_box :remember_me
+/   = f.label :remember_me
+/   = f.submit 'Sign in'
+/   = link_to "Forgot your password?", new_password_path(:user)

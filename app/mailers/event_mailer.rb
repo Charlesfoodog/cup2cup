@@ -1,5 +1,5 @@
 class EventMailer < ActionMailer::Base
-  default from: "charles@cup2cup.com"
+  default from: "charles@cup2cup.us"
   require 'googlestaticmap'
 
   def event_invitation(event, user)
@@ -13,5 +13,10 @@ class EventMailer < ActionMailer::Base
     @image_url = map.url('http')
     mail(to: @event.invitee_email, subject: 'Welcome to My Awesome Site')
 
+  end
+
+  def site_trial(user)
+    @user = user
+    mail(to: @user.email, subject: "Cup2Cup Trial")
   end
 end

@@ -237,6 +237,11 @@ Devise.setup do |config|
                     access_type: "offline", 
                     scope: 'https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/calendar https://www.googleapis.com/auth/plus.me' 
                   }
+  config.omniauth :linkedin,
+                  ENV["consumer_key"],
+                  ENV["consumer_secret"]
+
+
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

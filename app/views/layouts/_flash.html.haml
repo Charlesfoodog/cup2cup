@@ -1,5 +1,5 @@
 - flash.each do |name, msg|
-  .row
+  .row.flash
     .col-md-10.col-md-offset-1
       .alert{class: "alert-#{ name == :notice ? 'success' : 'danger' }"}
         %a.close{href: '#', data: {dismiss: 'alert'}} &times;
