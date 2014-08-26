@@ -8,20 +8,17 @@
  
       <h1>Never send<br>a cold email again</h1>
  
-      <div class="row">
-        <div class="col-md-6 col-sm-12 col-md-offset-3 subscribe">
-          <form class="form-horizontal" role="form" action="subscribe.php" id="subscribeForm" method="POST">
-            <div class="form-group">
-              <div class="col-md-7 col-sm-6 col-sm-offset-1 col-md-offset-0">
-                <input class="form-control input-lg" name="email" type="email" id="address" placeholder="Enter your email" data-validate="validate(required, email)" required="required">
-              </div>
-              <div class="col-md-5 col-sm-4">
-                <button type="submit" class="btn btn-success btn-lg">TRY IT OUT</button>
-              </div>
-            </div>
-          </form>
-          <span id="result" class="alertMsg"></span> </div>
-        </div> 
+      <div class="row login">           
+        <div class="col-md-4">
+          <%= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2), class: "btn btn-success btn-lg" %>
+        </div>
+        <div class="col-md-4">
+          <%= link_to "Sign in with Linkedin", user_omniauth_authorize_path(:linkedin), class: "btn btn-primary btn-lg" %>
+        </div>
+        <div class="col-md-4">
+          <%= render "sign_up" %>
+        </div>
+      </div>
         <h2>OR</h2>
  
         <a href="index.html#explore" class="scrollto">
@@ -146,20 +143,16 @@
         <h1>Sign up <strong>Now</strong> <br>
           and start taking better coffee meetings:</h1>
   
-        <div class="row login">
-           
-            <div class="col-md-4">
-              <%= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2), class: "btn btn-success btn-lg" %>
-            </div>
-            <div class="col-md-4">
-              <%= link_to "Sign in with Linkedin", user_omniauth_authorize_path(:linkedin), class: "btn btn-primary btn-lg" %>
-            </div>
-            <div class="col-md-4">
-              <%= render "sign_up" %>
-            </div>
-          <!-- <div class="col-md-12 breath text-center"> 
-            <a href="index.html#top" class="btn btn-success btn-lg gototop">GET EARLY ACCESS</a> 
-          </div> -->
+        <div class="row login">           
+          <div class="col-md-4">
+            <%= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2), class: "btn btn-success btn-lg" %>
+          </div>
+          <div class="col-md-4">
+            <%= link_to "Sign in with Linkedin", user_omniauth_authorize_path(:linkedin), class: "btn btn-primary btn-lg" %>
+          </div>
+          <div class="col-md-4">
+            <%= render "sign_up" %>
+          </div>
         </div>
       </div><! --/container -->
     </main><! --/main -->
