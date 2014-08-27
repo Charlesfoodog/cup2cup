@@ -12,10 +12,16 @@ class EventsController < ApplicationController
 
   def create
     @event = current_user.events.new(event_params)
-    @event.save
-    redirect_to @event, notice: "Invitation sent!"
     @user = current_user
-    EventMailer.event_invitation(@event, @user).deliver
+    if @event.save
+      redirect_to @event, notice: "Invitation sent!"
+      EventMailer.event_invitation(@event, @user).deliver
+    else
+      # flash.now[:error] = "Sorry, your question can not be added"
+      flash[:error] = @event.errors.full_messages.join('. ')
+      render :new
+    end
+    
 
   end
 

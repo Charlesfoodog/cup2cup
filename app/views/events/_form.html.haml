@@ -20,15 +20,17 @@
           Why?
         .whyForm
           = f.text_area :description, class: "form-control", placeholder: "Give them a compelling reason to meet you. (< 250 Chars)", wrap: "hard"
-      .formTextArea
-        .whenText
-          When?
+      .formWhenArea.clear
+        .whenText.col-md-12
+          What time works for you?
         .whenForm
-          .col-md-5
+          .col-md-6
+            Day:
             = f.text_field :start_time_date, as: :string, class: "form-control datepicker", placeholder: "#{Time.now.strftime("%e %B")}"
-          .col-md-7.hour
+          .col-md-6.hour
+            Time:
             = f.text_field :start_time_time, as: :time, class: "form-control timepicker", placeholder: "#{Time.now.strftime("%l:%M %p")}"
-      .formTextArea.where
+      .formTextArea.where.clear
         .whereText
           Where?
         .whereMap
