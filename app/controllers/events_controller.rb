@@ -19,9 +19,6 @@ class EventsController < ApplicationController
 
   end
 
-  def welcome_email
-    EventMailer.event_invitation
-  end
 
   def show
     @event = Event.find(params[:id])

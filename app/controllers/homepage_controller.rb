@@ -6,4 +6,19 @@ class HomepageController < ApplicationController
       redirect_to after_signup_path(:setup_email)
     end
   end
+
+  def welcome
+    @user = User.find(params[:id])
+    EventMailer.event_reply_yes(@event, @user).deliver
+  end
+
+  def welcome_maybe
+    @user = User.find(params[:id])
+    EventMailer.event_reply_maybe(@event, @user).deliver
+  end
+
+  def welcome_no
+    @user = User.find(params[:id])
+    EventMailer.event_reply_no(@event, @user).deliver
+  end
 end
