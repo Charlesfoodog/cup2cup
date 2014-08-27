@@ -36,7 +36,7 @@
         .whereMap
           = f.text_field :address, class: "form-control search-query", id: 'location_search'
           = render 'googlemap'
-      .formTextArea.who
+      .formTextArea.who.clear
         .whoTitle
           Who's #{current_user.first_name}?
         .col-md-3.whoImage
