@@ -197,6 +197,13 @@ to {
   box-shadow: 0 3px 0 rgba(2, 154, 67, 1);
   line-height: 1.8;
 }
+.btn-danger {
+  background-image:none;
+  border: 0;
+  -webkit-box-shadow: 0 3px 0 rgba(170,0,0, 1);
+  box-shadow: 0 3px 0 rgba(170,0,0, 1);
+  line-height: 1.8;
+}
 .btn-success:hover, .btn-success:focus, .btn-success:active {
   background-color: #29c36a;
   color:#FFF;
