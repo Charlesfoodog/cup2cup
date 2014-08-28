@@ -12,6 +12,11 @@
             %h2 Profile Picture
             = f.file_field :avatar
             = bootstrap_paperclip_picture f, :avatar
+        - else
+          .profile-pic.clear
+            %h2 Profile Picture
+            = f.file_field :avatar
+            %img{:src => "#{current_user.image_url}" }
         %br
         = f.submit "Continue", class: 'btn btn-success btn-lrg'
           

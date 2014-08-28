@@ -47,7 +47,7 @@
           %br
           %br
           <strong>Bio: </strong> #{current_user.bio}
-          = link_to "Edit", edit_user_registration_path
+          = link_to "Edit", after_signup_path(:setup_email)
           
 
     .inviteeEmailText
