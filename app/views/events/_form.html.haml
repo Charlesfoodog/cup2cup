@@ -1,11 +1,9 @@
 .form
-  .userInfo   
-    - if user_signed_in?
-      -if current_user.image_url != nil
-        %img{:src => "#{current_user.image_url}" }
-      -else
-        %img{:src => "#{current_user.avatar.url(:thumb)}"}
-      = link_to "Sign Out", destroy_user_session_path, method: :delete
+  .userInfo 
+    Welcome! Fill out your email template to get started:
+    .signOut  
+      - if user_signed_in?
+        = link_to "Sign Out", destroy_user_session_path, method: :delete
   = form_for @event, {class: 'form-horizontal'} do |f|
     .emailForm
       

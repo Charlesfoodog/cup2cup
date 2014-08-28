@@ -22,11 +22,12 @@ h5{font-size:28px;font-weight:600;margin:15px 0;color:#384047;}
 h6{font-size:16px;font-weight:600;margin:10px 0;color:#384047;}
 
 a{color:#5173bd;}
-a:hover,a:focus{color:#5173bd;}
+a:hover,a:focus{color:#5173bd; }
 
 section {width: 100%; }
+.userInfo {margin: 0 auto; margin-bottom: 20px; width: 100%;}
 .addBio { line-height: 2.1; text-align: center;color: black;background: url(https://s3-us-west-2.amazonaws.com/cup2cup/blurry_cafe.jpg) no-repeat; width: 100%; height: 100%; background-size: 100% auto;}
-// .flash {position: absolute; top: 20px; width: 80%; margin: 0 auto;}
+.flash {position: absolute; top: 20px; width: 80%; margin: 0 auto;}
 .im-centered { margin: auto; max-width: 255px;}
 .im-centered-2 { margin: auto; max-width: 500px;}
 .preloader{
@@ -124,7 +125,7 @@ section {width: 100%; }
   -webkit-animation:fadein 2s;
   -o-animation:fadein 2s;
   }
-.masthead h1 {margin-left: 15%;color: white; }
+.masthead h1 {margin-left: 15%;color: white; margin-bottom: 0;  margin-top: 0;}
 .logo {margin-bottom: 20px;}
 .logo img { height: 200px; margin-left: 15%; }
 .loading *{
@@ -564,10 +565,11 @@ to {
 .form {
   color: black;
   padding: 10px 40px 40px 40px;
+  width: 100%;
 }
-
+.signOut {float: right;}
 .emailForm {
-  width: 1000px;
+  width: 90%;
   margin: 0 auto;
   text-align: center;
   border: 2px dashed #7d5f44;
@@ -590,9 +592,9 @@ to {
 
 }
 .intro {
-  width: 600px;
+  width: 80%;
   height: 100px;
-  border: 1px solid black;
+  border-left: 5px solid #85bdad;
   font-size: 2em;
   vertical-align: center;
   margin: 0 auto;
@@ -600,17 +602,17 @@ to {
   background-color: white;
 }
 .formTextArea {
-  width: 600px;
+  width:80%;
   height: 100px;
-  border: 1px solid black;
+  // border: 1px solid black;
   font-size: 2em;
   background-color: white;
   margin: 0 auto;
   margin-top: 10px;
 }
 .formWhenArea {
-  width: 600px;
-  border: 1px solid black;
+  width:80%;
+  border-left: 5px solid #832701;
   font-size: 2em;
   background-color: white;
   margin: 0 auto;
@@ -618,7 +620,7 @@ to {
   text-align: center;
 }
 .whenText {
-  border-right: 1px solid black;
+
   height: 100%;
   float: left;
   padding-top: 10px;
@@ -626,7 +628,8 @@ to {
 }
 .whyText {
   width: 150px; 
-  border-right: 1px solid black;
+
+  border-left: 5px solid #ef3101;
   height: 100%;
   float: left;
   padding-top: 30px;

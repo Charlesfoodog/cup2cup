@@ -216,18 +216,59 @@
             </table>  
             <img border="0" src="images/spacer.gif" width="1" height="15" class="divider"><br>
             </layout>
-    </repeater>           
-    
-    </td>
-  </tr>
-  </table>
-  <table>
-    <tr>
-      <td class="secondary" width="267px" height="120px" style="text-align: center; border: 1px solid black;  background-color: white;"> <p style="text-align: center; font-size: 2em;" ><%= link_to "Yes", welcome_url(@user.id) %></p> </td>
-      <td class="secondary" width="267px" height="120px" style="text-align: center; border: 1px solid black;  background-color: white;"> <p style="text-align: center; font-size: 2em;"><%= link_to "Maybe", welcome_m_url(@user.id) %></p> </td>
-      <td  class="secondary" width="267px" height="120px" style="text-align: center; border: 1px solid black;  background-color: white;"> <p style="text-align: center; font-size: 2em;"><%= link_to "No", welcome_n_url(@user.id) %></p> </td>
-    </tr>
-  </table>
+
+            <layout label="New feature">
+              <table width="100%%" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td bgcolor="#85bdad" nowrap><img border="0" src="images/spacer.gif" width="5" height="1"></td>
+                <td width="33%" bgcolor="#ffffff">
+              
+                  <table width="100%" cellpadding="20" cellspacing="0" border="0">
+                  <tr>
+                    <td bgcolor="#ffffff" class="contentblock">
+
+                      <h4 class="secondary"><strong><singleline label="Title"><%= link_to "Yes", welcome_url(@user.id) %></singleline></strong></h4>
+                      
+
+                    </td>
+                  </tr>
+                  </table>
+              
+                </td>
+                <td bgcolor="#ef3101" nowrap><img border="0" src="images/spacer.gif" width="5" height="1"></td>
+                <td width="33%" bgcolor="#ffffff">
+              
+                  <table width="100%" cellpadding="20" cellspacing="0" border="0">
+                  <tr>
+                    <td bgcolor="#ffffff" class="contentblock">
+
+                      <h4 class="secondary"><strong><singleline label="Title"><%= link_to "Maybe", welcome_m_url(@user.id) %></singleline></strong></h4>
+                      
+
+                    </td>
+                  </tr>
+                  </table>
+              
+                </td>
+                <td bgcolor="#832701" nowrap><img border="0" src="images/spacer.gif" width="5" height="1"></td>
+                <td width="33%" bgcolor="#ffffff">
+              
+                  <table width="100%" cellpadding="20" cellspacing="0" border="0">
+                  <tr>
+                    <td bgcolor="#ffffff" class="contentblock">
+
+                      <h4 class="secondary"><strong><singleline label="Title"><%= link_to "No", welcome_n_url(@user.id) %></singleline></strong></h4>
+                      
+
+                    </td>
+                  </tr>
+                  </table>
+              
+                </td>
+              </tr>
+              </table>
+            </layout>
+            
 
   <img border="0" src="images/spacer.gif" width="1" height="25" class="divider"><br>
 
@@ -247,7 +288,7 @@
             
               <img border="0" src="images/spacer.gif" width="1" height="8"><br>  
             
-              <p style="color:#a6a6a6;font-size:12px;font-family:Helvetica,Arial,sans-serif;margin-top:0;margin-bottom:15px;padding-top:0;padding-bottom:0;line-height:18px;" class="reminder">You’re receiving this because you’re an awesome ABC Widgets customer or subscribed via <a href="http://www.abcwidgets.com/" style="color:#a6a6a6;text-decoration:underline;">our site</a>.</p>
+              <p style="color:#a6a6a6;font-size:12px;font-family:Helvetica,Arial,sans-serif;margin-top:0;margin-bottom:15px;padding-top:0;padding-bottom:0;line-height:18px;" class="reminder">You’re receiving this because you’ve been invited for coffee via <a href="http://www.cup2cup.us/" style="color:#a6a6a6;text-decoration:underline;">www.cup2cup.us</a>.</p>
               <p style="color:#c9c9c9;font-size:12px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;"><preferences style="color:#3ca7dd;text-decoration:none;"><strong>Edit your subscription</strong></preferences>&nbsp;&nbsp;|&nbsp;&nbsp;<unsubscribe style="color:#3ca7dd;text-decoration:none;"><strong>Unsubscribe instantly</strong></unsubscribe></p>
             
             </td>
