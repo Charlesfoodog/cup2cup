@@ -19,7 +19,7 @@ class EventMailer < ActionMailer::Base
     map = GoogleStaticMap.new(:zoom => 15, :center => MapLocation.new(:address => @event.address))
     map.markers << MapMarker.new(:color => "blue", :location => MapLocation.new(:address => @event.address))
     @image_url = map.url('http')
-    mail(to: @event.invitee_email, subject: 'Welcome to My Awesome Site')
+    mail(to: @event.invitee_email, subject: 'I want to buy you a coffee')
 
   end
 

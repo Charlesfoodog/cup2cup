@@ -7,7 +7,7 @@
           %br (Hint: make yourself seem interesting) 
         = f.text_area :bio, class: 'form-control', rows: '10'
         %br
-        - if current_user.image_url != nil
+        - if current_user.image_url === nil
           .profile-pic.clear
             %h2 Profile Picture
             = f.file_field :avatar
