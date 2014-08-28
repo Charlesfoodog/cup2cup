@@ -13,7 +13,7 @@
       .intro
         = current_user.first_name
         wants to buy you a coffee!
-      .formTextArea
+      .formTextArea.clear
         .whyText
           Why?
         .whyForm
@@ -31,7 +31,7 @@
       .formTextArea.where.clear
         .whereText
           Where?
-        .whereMap
+        .whereMap.clear
           = f.text_field :address, class: "form-control search-query", id: 'location_search'
           = render 'googlemap'
       .formTextArea.who.clear
