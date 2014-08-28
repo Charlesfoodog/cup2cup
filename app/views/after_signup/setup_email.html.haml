@@ -2,6 +2,11 @@
   .im-centered-2
     .row.setupEmail
       = form_for @user, url: wizard_path, method: :put do |f|
+        - if @user.provider === nil
+          First Name:
+          = f.text_field :first_name, class: 'form-control', autofocus: true
+          Last Name:
+          = f.text_field :last_name, class: 'form-control'
         %h2 
           Add a quick biography for yourself 
           %br (Hint: make yourself seem interesting) 
