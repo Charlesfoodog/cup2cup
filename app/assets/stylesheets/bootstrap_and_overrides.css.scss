@@ -630,12 +630,14 @@ to {
 .whyText {
   width: 150px; 
 
-  border-left: 5px solid #ef3101;
+  
   height: 100%;
   float: left;
   padding-top: 30px;
 }
+.why {border-left: 5px solid #ef3101;}
 .whyForm {
+
   width: calc(100% - 150px);
   float: right;
   }
