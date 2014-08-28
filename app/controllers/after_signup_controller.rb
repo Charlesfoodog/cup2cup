@@ -5,7 +5,7 @@ class AfterSignupController < Wicked::WizardController
 
   def show
     @user = current_user
-    EventMailer.welcome_email(@user).deliver
+    # EventMailer.welcome_email(@user).deliver
     # case step
     render_wizard 
   end
