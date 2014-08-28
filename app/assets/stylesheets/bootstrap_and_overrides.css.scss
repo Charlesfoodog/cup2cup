@@ -636,12 +636,12 @@ to {
   padding-top: 30px;
 }
 .whyForm {
-  width: 447px;
+  width: calc(100% - 150px);
   float: right;
-}
+  }
 .whyForm textarea {
-  width: 447px;
-  height: 100px;
+  width: 90%;
+  min-height: 100px;
   border: none;
   border-radius: 0;
   background: transparent;
@@ -704,8 +704,6 @@ to {
 .whoTitle { font-size: 0.9em; padding: 10px 20px 5px 10px; text-align: left;}
 .whoImage {width: 220px;}
 .whoText {
-  width: 374px;
-  float: right;
   text-align: left;
   font-size: 0.6em;
 }
