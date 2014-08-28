@@ -9,16 +9,22 @@ class HomepageController < ApplicationController
 
   def welcome
     @user = User.find(params[:id])
+    @event = Event.find(params[:format])
+    @time = @event.start_time.strftime("%B %e at %l:%M %p")
     EventMailer.event_reply_yes(@event, @user).deliver
   end
 
   def welcome_maybe
     @user = User.find(params[:id])
+    @event = Event.find(params[:format])
+    @time = @event.start_time.strftime("%B %e at %l:%M %p")
     EventMailer.event_reply_maybe(@event, @user).deliver
   end
 
   def welcome_no
     @user = User.find(params[:id])
+    @event = Event.find(params[:format])
+    @time = @event.start_time.strftime("%B %e at %l:%M %p")
     EventMailer.event_reply_no(@event, @user).deliver
   end
 end

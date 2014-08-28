@@ -30,20 +30,32 @@ class EventMailer < ActionMailer::Base
 
   def event_reply_yes(event, user)
     @event = event
-    # @time = @event.start_time.strftime("%B %e at %l:%M %p")
+    @time = @event.start_time.strftime("%B %e at %l:%M %p")
     @user = user
+    map = GoogleStaticMap.new(:zoom => 15, :center => MapLocation.new(:address => @event.address))
+    map.markers << MapMarker.new(:color => "blue", :location => MapLocation.new(:address => @event.address))
+    @image_url = map.url('http')
+    mail(to: @user.email, subject: 'Your coffee meeting is planned!')
   end
 
   def event_reply_maybe(event, user)
     @event = event
-    # @time = event.start_time.strftime("%B %e at %l:%M %p")
+    @time = event.start_time.strftime("%B %e at %l:%M %p")
     @user = user
+    map = GoogleStaticMap.new(:zoom => 15, :center => MapLocation.new(:address => @event.address))
+    map.markers << MapMarker.new(:color => "blue", :location => MapLocation.new(:address => @event.address))
+    @image_url = map.url('http')
+    mail(to: @user.email, subject: 'Your coffee meeting is planned!')
   end
 
   def event_reply_no(event, user)
     @event = event
-    # @time = @event.start_time.strftime("%B %e at %l:%M %p")
+    @time = @event.start_time.strftime("%B %e at %l:%M %p")
     @user = user
+    map = GoogleStaticMap.new(:zoom => 15, :center => MapLocation.new(:address => @event.address))
+    map.markers << MapMarker.new(:color => "blue", :location => MapLocation.new(:address => @event.address))
+    @image_url = map.url('http')
+    mail(to: @user.email, subject: 'Your coffee meeting is planned!')
   end
 
 end

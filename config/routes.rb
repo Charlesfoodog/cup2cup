@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   resources :events
   resources :after_signup
 
-  get "/welcome/:id", to: "homepage#welcome", as: "welcome"
-  get "/welcome_m/:id", to: "homepage#welcome_maybe", as: "welcome_m"
-  get "/welcome_n/:id", to: "homepage#welcome_no", as: "welcome_n"
+  get "/welcome/:id/event/format", to: "homepage#welcome", as: "welcome"
+  get "/welcome_m/:id/event/:id", to: "homepage#welcome_maybe", as: "welcome_m"
+  get "/welcome_n/:id/event/:id", to: "homepage#welcome_no", as: "welcome_n"
 
   get "/", to: "homepage#index"
 

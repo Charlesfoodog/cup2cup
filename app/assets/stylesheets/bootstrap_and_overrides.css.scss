@@ -26,7 +26,7 @@ a:hover,a:focus{color:#5173bd; }
 
 section {width: 100%; }
 .userInfo {margin: 0 auto; margin-bottom: 20px; width: 100%;}
-.addBio { line-height: 2.1; text-align: center;color: black;background: url(https://s3-us-west-2.amazonaws.com/cup2cup/blurry_cafe.jpg) no-repeat; width: 100%; height: 100%; background-size: 100% auto;}
+.addBio { line-height: 2.1; text-align: center;color: black;background: url(https://s3-us-west-2.amazonaws.com/cup2cup/blurry_cafe.jpg) repeat-y; width: 100%; height: 100%; background-size: cover; }
 .flash {position: absolute; top: 20px; width: 80%; margin: 0 auto;}
 .im-centered { margin: auto; max-width: 255px;}
 .im-centered-2 { margin: auto; max-width: 500px;}
@@ -663,10 +663,13 @@ to {
   // height: 100px;
    width: 220px;
    padding: 10px;
-  border-left: 5px solid black;
+  border-left: 3px solid black;
   margin-bottom: 20px;
   margin-top: 20px;
   text-align: left;
+}
+.whenForm input:focus {
+  font-weight: 500;
 }
 .hour input{
   width: 120px;
@@ -674,8 +677,10 @@ to {
 }
 .where {
   height: 100%;
+  border-left: 5px solid #85bdad;
 }
 .where input {
+  border: 1px solid black;
   width: 90%;
   margin: 0 auto;
   border-radius: 0;
@@ -686,13 +691,14 @@ to {
   height: 100%;
   float: left;
   padding-top: 30px;
+  
 }
 .whereMap {
-  width: 447px;
+  min-width: 447px;
   float: right;
 }
 .who {
-  height: 100%; padding-bottom: 20px;
+  height: 100%; padding-bottom: 20px;border-left: 5px solid #ef3101;
 }
 .whoTitle { font-size: 0.9em; padding: 10px 20px 5px 10px; text-align: left;}
 .whoImage {width: 220px;}
@@ -713,8 +719,8 @@ to {
 .setupEmail {
   padding-top: 200px;
 }
-
-
+.response {width: 70%; background: rgba(255,255,255,0.9); margin-top: 20px; padding: 20px; border-left: 5px solid #85bdad;}
+.response img {width: 200px;}
 #googlemap {
   width: 90%;
   height: 334px;

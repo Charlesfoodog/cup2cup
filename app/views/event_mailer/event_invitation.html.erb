@@ -111,7 +111,8 @@
     <tr>
       <td bgcolor="white" color="black" width="600" class="promocell">                      
        
-        <multiline label="Main feature intro"><img src="https://s3-us-west-2.amazonaws.com/cup2cup/Cup2CupLogoTry2_Text.png" width="100px" ><p color="black"><%= @event.user.first_name %> wants to buy you a coffee!</p></multiline>
+        <multiline label="Main feature intro"><a href="http://www.cup2cup.us" alt="logo"><img src="https://s3-us-west-2.amazonaws.com/cup2cup/Cup2CupLogoTry2_Text.png" width="100px" > </a>     
+          <p color="black"><%= @event.user.first_name %> wants to buy you a coffee!</p></multiline>
       
       </td>
     </tr>
@@ -227,7 +228,7 @@
                   <tr>
                     <td bgcolor="#ffffff" class="contentblock">
 
-                      <h4 class="secondary"><strong><singleline label="Title"><%= link_to "Yes", welcome_url(@user.id) %></singleline></strong></h4>
+                      <h4 class="secondary"><strong><singleline label="Title"><%= link_to "Yes", welcome_url(@user.id, @event.id) %></singleline></strong></h4>
                       
 
                     </td>
@@ -242,7 +243,7 @@
                   <tr>
                     <td bgcolor="#ffffff" class="contentblock">
 
-                      <h4 class="secondary"><strong><singleline label="Title"><%= link_to "Maybe", welcome_m_url(@user.id) %></singleline></strong></h4>
+                      <h4 class="secondary"><strong><singleline label="Title"><%= link_to "Maybe", welcome_m_url(@user.id, @event.id) %></singleline></strong></h4>
                       
 
                     </td>
@@ -257,7 +258,7 @@
                   <tr>
                     <td bgcolor="#ffffff" class="contentblock">
 
-                      <h4 class="secondary"><strong><singleline label="Title"><%= link_to "No", welcome_n_url(@user.id) %></singleline></strong></h4>
+                      <h4 class="secondary"><strong><singleline label="Title"><%= link_to "No", welcome_n_url(@user.id, @event.id) %></singleline></strong></h4>
                       
 
                     </td>
