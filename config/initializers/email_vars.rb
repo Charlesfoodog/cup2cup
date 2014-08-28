@@ -1,8 +1,8 @@
 ActionMailer::Base.smtp_settings = {
-  address: 'smtp.gmail.com',
+  address: 'smtp.mandrillapp.com',
   port:     '587',
-  user_name: ENV['email_username'],
-  password: ENV['email_password'],
+  user_name: ENV['mandrill_username'],
+  password: ENV['mandrill_password'],
   authentication: :plain,
   enable_starttls_auto: true
 }
