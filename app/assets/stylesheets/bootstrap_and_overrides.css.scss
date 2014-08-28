@@ -837,6 +837,7 @@ line-height: 40px;
  .masthead {
 padding: 40px 15px;
 }
+#explore {clear: both; display: inline-block;} 
 }
  @media (max-width: 480px) {
    /*Media Queries for smaller devices*/
@@ -859,4 +860,5 @@ padding: 40px 15px;
   .whereMap {float: none; width: 100%; }
   .whereMap input {width: 50%;}
   #googlemap {width: 100%; margin-left: 0; margin-right: 0;}
+
 }
